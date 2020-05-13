@@ -1,7 +1,7 @@
 ﻿  Source.cpp
   Создание кода
-  33 of 173 functions (19.1%) were compiled, the rest were copied from previous compilation.
-    29 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  170 of 174 functions (97.7%) were compiled, the rest were copied from previous compilation.
+    30 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
-  Project2.vcxproj -> C:\Users\Maxim\source\repos\Project2\Release\Project2.exe
+  Project2.vcxproj -> C:\Git\myGit\snake game\Release\Project2.exe

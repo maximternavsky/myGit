@@ -44,6 +44,10 @@ private:
 			this->y = y;
 			this->pNext = pNext;
 		}
+		~Node()
+		{
+			delete x, y;
+		}
 	};
 
 	Node<T>* head;
@@ -333,34 +337,22 @@ void Player<T>::Render()
 template<class T>
 bool Player<T>::is_collision()
 {
-	Node<T>* current = this->head;
+	Node<T>* current = this->head->pNext;
+	
 
-	int* x = new int[size];
-	int* y = new int[size];
-	int i = 0;
-	x[i] = this->head->x;
-	y[i] = this->head->y;
-	i++;
 
 	while (current->pNext != nullptr)
 	{
-		x[i] = current->x;
-		y[i] = current->y;
-		i++;
+		if (this->head->x == current->x && this->head->y == current->y)
+		{
+			return true;
+		}
 		current = current->pNext;
 
 	}
-	i++;
-	x[i] = current->x;
-	y[i] = current->y;
-	i = 0;
-
-	for (int i = 0; i < this->size; i++)
+	if (this->head->x == current->x && this->head->y == current->y)
 	{
-		for (int j = 0; j < this->size; j++)
-		{
-			if (x[i] == x[j] && i != j) { return true; }
-		}
+		return true;
 	}
 
 	return false;
@@ -388,7 +380,7 @@ int main()
 				pl.Step();
 			});
 
-		for (int i = 5; i < 10; i++)
+		for (int i = 5; i < 20; i++)
 		{
 			pl.push_back(i, 15);
 		}
