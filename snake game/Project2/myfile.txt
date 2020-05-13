@@ -1,0 +1,3 @@
+Follow this one-hour webinar to learn how to run a classification engine on the Machine Learning Core embedded in our latest iNEMO™ inertial modules.
+
+From theory to practice, we will show you how to easily design power-efficient decision trees using AlgoBuilder and Unico GUIs and the ready-to-go IoT node SensorTile.box.
