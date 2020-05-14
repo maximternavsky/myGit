@@ -3,6 +3,11 @@
 #include <iostream>
 #include <ostream>
 #include <istream>
+#include <conio.h>
+
+#define LEFT 75
+#define RIGHT 77
+#define ESC 27
 
 
 using namespace std;
@@ -51,9 +56,53 @@ ostream& operator << (ostream& os, Int a)
     return os;
 }
 
+class tolBooth
+{
+    unsigned int countCar;
+    double cash;
+public:
+    tolBooth() : countCar(0), cash(0)
+    {}
+
+    void payingCar()
+    {
+        countCar++;
+        cash += 0.5;
+    }
+
+    void nopayCar()
+    {
+        countCar++;
+    }
+
+    void display() const
+    {
+        cout << "Количество машин - " << countCar << endl;
+        cout << "Сумма выручки - " << cash << endl;
+    }
+};
+
+
 
 int main()
 {
-    Int i(5);
-    cout << i;
+    tolBooth kassa;
+    setlocale(LC_ALL, "ru");
+
+    while (true)
+    {
+        if (_getch() == LEFT)
+        {
+            kassa.payingCar();
+        }
+        else if (_getch() == RIGHT)
+        {
+            kassa.nopayCar();
+        }
+        else if (_getch() == ESC)
+        {
+            kassa.display();
+        }
+        
+    }
 }
