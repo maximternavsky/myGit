@@ -1,4 +1,5 @@
 ﻿
+//стр 258
 
 #include <iostream>
 #include <ostream>
@@ -6,7 +7,8 @@
 #include <conio.h>
 
 //#define TOLBOOTH
-#define TIME
+//#define TIME
+#define EMPLOYEE
 
 #define LEFT 75
 #define RIGHT 77
@@ -113,6 +115,53 @@ ostream& operator << (ostream& os, time t)
     return os;
 }
 
+class employee
+{
+    int number;
+    float salary;
+
+public:
+
+    employee()
+    {
+
+    }
+
+    employee(int number, float salary) : number(number), salary(salary)
+    {
+
+    }
+
+    void setData()
+    {
+        int num;
+        float sal;
+        cout << "Enter number" << endl;
+        cin >> num;
+        cout << "Enter salary" << endl;
+        cin >> sal;
+        this->number = num;
+        this->salary = sal;
+    }
+
+    int getNumber()
+    {
+        return number;
+    }
+
+    int getSalary()
+    {
+        return salary;
+    }
+
+};
+
+ostream& operator<<(ostream& os, employee& obj)
+{
+    os << "number: " << obj.getNumber() << " salary: " << obj.getSalary() << endl;
+    return os;
+}
+
 
 
 int main()
@@ -148,4 +197,16 @@ int main()
     cout << t3;
 #endif
 
+#ifdef EMPLOYEE
+    employee p1, p2, p3;
+    p1.setData();
+    p2.setData();
+    p3.setData();
+
+    cout << p1 << endl;
+    cout << p2 << endl;
+    cout << p3 << endl;
+#endif 
+
+    return 0;
 }
