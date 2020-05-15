@@ -5,6 +5,9 @@
 #include <istream>
 #include <conio.h>
 
+//#define TOLBOOTH
+#define TIME
+
 #define LEFT 75
 #define RIGHT 77
 #define ESC 27
@@ -82,10 +85,40 @@ public:
     }
 };
 
+class time
+{
+public:
+    int hour, minute, second;
+
+    friend ostream;
+
+    time() : hour(0), minute(0), second(0)
+    {}
+
+    time(int h, int m, int s) : hour(h),minute(m),second(s)
+    {
+    }
+
+    time& operator + (time& other) const
+    {
+        time newTime(hour + other.hour,minute + other.minute, second + other.second);
+        return newTime;
+    }
+
+};
+
+ostream& operator << (ostream& os, time t) 
+{
+    os << t.hour << ":" << t.minute << ":" << t.second << endl;
+    return os;
+}
+
 
 
 int main()
 {
+#ifdef TOLBOOTH
+
     tolBooth kassa;
     setlocale(LC_ALL, "ru");
 
@@ -105,4 +138,14 @@ int main()
         }
         
     }
+#endif
+
+#ifdef TIME
+    time t1(5, 5, 5);
+    time t2(4, 4, 4);
+    time t3;
+    t3 = t1 + t2;
+    cout << t3;
+#endif
+
 }
