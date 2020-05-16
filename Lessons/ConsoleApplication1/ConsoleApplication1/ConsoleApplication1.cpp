@@ -9,8 +9,9 @@
 
 //#define TOLBOOTH
 //#define TIME
-#define EMPLOYEE
+//#define EMPLOYEE
 //#define DATE
+#define ANGLE
 
 #define LEFT 75
 #define RIGHT 77
@@ -20,6 +21,14 @@
 using namespace std;
 
 class Date;
+
+enum napr
+{
+    North,
+    West,
+    East,
+    South
+};
 
 enum etype
 {
@@ -224,7 +233,53 @@ ostream& operator<<(ostream& os, employee& obj)
     return os;
 }
 
+class Angle
+{
+    int grad;
+    float minute;
+    char curs;
+public:
+    Angle(int grad, float minute, char curs) : grad(grad), minute(minute), curs(curs)
+    {}
 
+    void setPoint(int grad, float minute, char curs) 
+    {
+        this->grad = grad;
+        this->minute = minute;
+        this->curs = curs;
+    }
+
+    void setPoint()
+    {
+        cout << "grag: ";
+        cin >> grad;
+        cout << " minute: ";
+        cin >> minute;
+        cout << " curs: ";
+        cin >> curs;
+    }
+
+    int getGrad()
+    {
+        return grad;
+    }
+
+    float getMinute()
+    {
+        return minute;
+    }
+
+    char getCurs()
+    {
+        return curs;
+    }
+};
+
+ostream& operator<<(ostream& os, Angle& other)
+{
+    os << other.getGrad() << '\xF8' << other.getMinute() << '\'' << ' ' << other.getCurs() << endl;
+    return os;
+}
 
 int main()
 {
@@ -275,6 +330,17 @@ int main()
     d.setdate(15, 02, 2020);
     d.showdata();
 #endif 
+
+#ifdef ANGLE
+    Angle a(170, 12.5, 'W');
+    cout << a;
+
+    while (true)
+    {
+        a.setPoint();
+        cout << a;
+    }
+#endif
 
 
     return 0;
