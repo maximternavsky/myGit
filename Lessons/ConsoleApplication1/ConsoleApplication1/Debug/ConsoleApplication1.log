@@ -1,3 +1,5 @@
 ﻿  ConsoleApplication1.cpp
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(216,16): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(217,16): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(343,28): warning C4129: /: неизвестная escape-последовательность
+C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(317): warning C4172: возвращение адреса локальной или временной переменной : f
   ConsoleApplication1.vcxproj -> C:\Git\myGit\Lessons\ConsoleApplication1\Debug\ConsoleApplication1.exe

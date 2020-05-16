@@ -12,7 +12,8 @@
 //#define EMPLOYEE
 //#define DATE
 //#define ANGLE
-#define MYCLASS
+//#define MYCLASS
+#define FRICTION
 
 #define LEFT 75
 #define RIGHT 77
@@ -299,6 +300,50 @@ public:
 
 int myClass::numb = 0;
 
+struct fraction
+{
+    fraction() : chisl(0), znam(0)
+    {}
+
+    fraction(int ch, int zn) : chisl(ch), znam(zn)
+    {}
+
+    fraction& operator + (fraction& other)
+    {
+        int ch = (chisl * other.znam + other.chisl * znam);
+        int zn = znam * other.znam;
+
+        fraction f(ch, zn);
+        return f;
+    }
+
+   /* fraction& operator = (fraction& other)
+    {
+        fraction fr(other.chisl, other.znam);
+        return fr;
+    }*/
+
+    int getChisl()
+    {
+        return chisl;
+    }
+
+    int getZnam()
+    {
+        return znam;
+    }
+
+private:
+
+    int chisl, znam;
+};
+
+ostream& operator << (ostream& os, fraction& fr)
+{
+    os << fr.getChisl() << "\/" << fr.getZnam() << endl;
+    return os;
+}
+
 int main()
 {
 #ifdef TOLBOOTH
@@ -366,6 +411,15 @@ int main()
     myClass c;
 
     b.showNumb();
+#endif
+
+#ifdef FRICTION
+    fraction f1(7, 8), f2(15,17);
+    fraction f3(5,9);
+    cout << f1;
+    cout << f2;
+    f3 = f1 + f2;
+    cout << f3;
 #endif
 
     return 0;
