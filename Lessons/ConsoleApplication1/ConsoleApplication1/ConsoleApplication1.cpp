@@ -9,8 +9,8 @@
 
 //#define TOLBOOTH
 //#define TIME
-//#define EMPLOYEE
-#define DATE
+#define EMPLOYEE
+//#define DATE
 
 #define LEFT 75
 #define RIGHT 77
@@ -18,6 +18,15 @@
 
 
 using namespace std;
+
+class Date;
+
+enum etype
+{
+    Лаборант,
+    Секретарь,
+    Менеджер
+};
 
 class Int
 {
@@ -117,19 +126,53 @@ ostream& operator << (ostream& os, time t)
     return os;
 }
 
+class Date
+{
+    int month, day, year;
+
+public:
+    Date();
+    void setdate(int day, int month, int year)
+    {
+        this->day = day;
+        this->month = month;
+        this->year = year;
+    }
+
+    void showdata()
+    {
+        string str = to_string(day) + "." + to_string(month) + "." + to_string(year);
+        cout << str << endl;
+    }
+
+    string getdata()
+    {
+        string str = to_string(day) + "." + to_string(month) + "." + to_string(year);
+        return str;
+    }
+};
+
+Date::Date()
+{
+
+}
+
 class employee
 {
+    friend Date;
     int number;
     float salary;
+    Date date;
+    etype dolznost;
 
 public:
 
-    employee()
+    employee() : number(0), salary(0), date(), dolznost()
     {
 
     }
 
-    employee(int number, float salary) : number(number), salary(salary)
+    employee(int number, float salary, Date date, etype dolznost) : number(number), salary(salary), date(date), dolznost(dolznost)
     {
 
     }
@@ -138,12 +181,19 @@ public:
     {
         int num;
         float sal;
+        int dol;
+        Date dat;
         cout << "Enter number" << endl;
         cin >> num;
         cout << "Enter salary" << endl;
         cin >> sal;
+        dat.setdate(15,02,2020);
+        cout << "Enter etype" << endl;
+        cin >> dol;
         this->number = num;
         this->salary = sal;
+        this->date = dat;
+        this->dolznost = etype(dol);
     }
 
     int getNumber()
@@ -156,32 +206,24 @@ public:
         return salary;
     }
 
+    string getDate()
+    {
+        return date.getdata();
+    }
+
+    etype getetype()
+    {
+        return dolznost;
+    }
+
 };
 
 ostream& operator<<(ostream& os, employee& obj)
 {
-    os << "number: " << obj.getNumber() << " salary: " << obj.getSalary() << endl;
+    os << "number: " << obj.getNumber() << " salary: " << obj.getSalary() << " date: " << obj.getDate() << " etype: " << obj.getetype() << endl;
     return os;
 }
 
-class Date
-{
-    int month, day, year;
-
-public:
-    void getdate(int day, int month, int year)
-    {
-        this->day = day;
-        this->month = month;
-        this->year = year;
-    }
-
-    void showdata()
-    {
-        string str = to_string(day) + "." + to_string(month) + "." + to_string(year);
-        cout << str << endl;
-    }
-};
 
 
 int main()
@@ -220,17 +262,17 @@ int main()
 #ifdef EMPLOYEE
     employee p1, p2, p3;
     p1.setData();
-    p2.setData();
-    p3.setData();
+    /*p2.setData();
+    p3.setData();*/
 
     cout << p1 << endl;
-    cout << p2 << endl;
-    cout << p3 << endl;
+   /* cout << p2 << endl;
+    cout << p3 << endl;*/
 #endif 
 
 #ifdef DATE
     Date d;
-    d.getdate(15, 02, 2020);
+    d.setdate(15, 02, 2020);
     d.showdata();
 #endif 
 
