@@ -11,7 +11,8 @@
 //#define TIME
 //#define EMPLOYEE
 //#define DATE
-#define ANGLE
+//#define ANGLE
+#define MYCLASS
 
 #define LEFT 75
 #define RIGHT 77
@@ -281,6 +282,23 @@ ostream& operator<<(ostream& os, Angle& other)
     return os;
 }
 
+class myClass
+{
+    static int numb;
+public:
+    myClass()
+    {
+        numb++;
+    }
+
+    void showNumb()
+    {
+        cout << "My number: " << numb << endl;
+    }
+};
+
+int myClass::numb = 0;
+
 int main()
 {
 #ifdef TOLBOOTH
@@ -342,6 +360,13 @@ int main()
     }
 #endif
 
+#ifdef MYCLASS
+    myClass a;
+    myClass b;
+    myClass c;
+
+    b.showNumb();
+#endif
 
     return 0;
 }
