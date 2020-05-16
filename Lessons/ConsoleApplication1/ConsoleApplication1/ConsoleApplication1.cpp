@@ -5,10 +5,12 @@
 #include <ostream>
 #include <istream>
 #include <conio.h>
+#include <string>
 
 //#define TOLBOOTH
 //#define TIME
-#define EMPLOYEE
+//#define EMPLOYEE
+#define DATE
 
 #define LEFT 75
 #define RIGHT 77
@@ -162,6 +164,24 @@ ostream& operator<<(ostream& os, employee& obj)
     return os;
 }
 
+class Date
+{
+    int month, day, year;
+
+public:
+    void getdate(int day, int month, int year)
+    {
+        this->day = day;
+        this->month = month;
+        this->year = year;
+    }
+
+    void showdata()
+    {
+        string str = to_string(day) + "." + to_string(month) + "." + to_string(year);
+        cout << str << endl;
+    }
+};
 
 
 int main()
@@ -207,6 +227,13 @@ int main()
     cout << p2 << endl;
     cout << p3 << endl;
 #endif 
+
+#ifdef DATE
+    Date d;
+    d.getdate(15, 02, 2020);
+    d.showdata();
+#endif 
+
 
     return 0;
 }
