@@ -13,7 +13,8 @@
 //#define DATE
 //#define ANGLE
 //#define MYCLASS
-#define FRICTION
+//#define FRICTION
+#define SHIP
 
 #define LEFT 75
 #define RIGHT 77
@@ -237,10 +238,14 @@ ostream& operator<<(ostream& os, employee& obj)
 
 class Angle
 {
+    friend Ship;
     int grad;
     float minute;
     char curs;
 public:
+    Angle() : grad(0), minute(0), curs(' ')
+    {}
+
     Angle(int grad, float minute, char curs) : grad(grad), minute(minute), curs(curs)
     {}
 
@@ -274,6 +279,13 @@ public:
     char getCurs()
     {
         return curs;
+    }
+
+    string getPoint()
+    {
+        string str;
+        str = to_string(grad) + '\xF8' + to_string(minute) + '\'' + curs;
+        return str;
     }
 };
 
@@ -340,8 +352,52 @@ private:
 
 ostream& operator << (ostream& os, fraction& fr)
 {
-    os << fr.getChisl() << "\/" << fr.getZnam() << endl;
+    os << fr.getChisl() << '\/' << fr.getZnam() << endl;
     return os;
+}
+
+class Ship
+{
+    static int st_id;
+    Angle w, h;
+    int id;
+
+public:
+    Ship() : w(Angle()), h(Angle())
+    {
+        id = ++st_id;
+    }
+
+    void setCoordinates()
+    {
+        cout << "Enter w ";
+        w.setPoint();
+        cout << "h ";
+        h.setPoint();
+
+    }
+
+    int getId()
+    {
+        return id;
+    }
+
+    Angle& getW()
+    {
+        return w;
+    }
+
+    Angle& getH()
+    {
+        return h;
+    }
+};
+
+int Ship::st_id = 0;
+
+ostream& operator << (ostream& os, Ship chip)
+{
+    os << chip.getId() << chip.getW().getPoint() << ' ' << chip.getH().getPoint() << endl;
 }
 
 int main()
@@ -421,6 +477,18 @@ int main()
     f3 = f1 + f2;
     cout << f3;
 #endif
+
+#ifdef SHIP
+    Ship h1, h2, h3;
+    h1.setCoordinates();
+    h2.setCoordinates();
+    h3.setCoordinates();
+    
+    cout << h1;
+    cout << h2;
+    cout << h3;
+#endif 
+
 
     return 0;
 }
