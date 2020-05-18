@@ -1,20 +1,4 @@
 ﻿  ConsoleApplication1.cpp
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(218,16): warning C4244: return: преобразование "float" в "int", возможна потеря данных
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(241,16): error C2433: Ship: "friend" не разрешается для объявлений данных
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(241,16): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(355,28): warning C4129: /: неизвестная escape-последовательность
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(398,41): error C2061: синтаксическая ошибка: идентификатор "Ship"
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(399,1): error C2805: бинарный "operator <<" имеет слишком мало параметров
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(400,11): error C2065: chip: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(400,27): error C2065: chip: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(400,60): error C2065: chip: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(482,10): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "h1"
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(482,10): error C2065: h1: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(482,14): error C2065: h2: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(482,18): error C2065: h3: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(483,5): error C2065: h1: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(484,5): error C2065: h2: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(485,5): error C2065: h3: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(487,13): error C2065: h1: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(488,13): error C2065: h2: необъявленный идентификатор
-C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(489,13): error C2065: h3: необъявленный идентификатор
+C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(219,16): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\Git\myGit\Lessons\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(356,28): warning C4129: /: неизвестная escape-последовательность
+  ConsoleApplication1.vcxproj -> C:\Git\myGit\Lessons\ConsoleApplication1\Debug\ConsoleApplication1.exe

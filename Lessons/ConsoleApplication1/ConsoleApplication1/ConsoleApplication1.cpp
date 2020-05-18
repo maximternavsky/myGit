@@ -24,6 +24,7 @@
 using namespace std;
 
 class Date;
+class Ship;
 
 enum napr
 {
@@ -397,7 +398,8 @@ int Ship::st_id = 0;
 
 ostream& operator << (ostream& os, Ship chip)
 {
-    os << chip.getId() << chip.getW().getPoint() << ' ' << chip.getH().getPoint() << endl;
+    os << "ID-" << chip.getId() << ' ' << chip.getW().getPoint() << ' ' << chip.getH().getPoint() << endl;
+    return os;
 }
 
 int main()
