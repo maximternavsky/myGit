@@ -1,27 +1,33 @@
 #include <iostream>
 #include <vector>
-std::vector<int> countBy(int x, int n) {
 
-	int xBefore = x;
-	int mult = x * n;
-	std::vector<int> array;
+using namespace std;
 
-	array.push_back(x);
-	while (x < mult)
+unsigned short int expressionsMatter(unsigned short int a, unsigned short int b, unsigned short int c)
+{
+	vector<unsigned short int> results;
+
+	unsigned short int bigNumber = 0;
+
+	results.push_back(a * b * c);
+	results.push_back(a + b + c);
+	results.push_back((a + b) * c);
+	results.push_back(a * b + c);
+	for (unsigned short int i : results)
 	{
-		array.push_back(x + xBefore);
-		x += xBefore;
+		if (i > bigNumber)
+		{
+			bigNumber = i;
+		}
 	}
-
-
-	return array;
+	return bigNumber;
 }
 
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 
-	countBy(100, 5);
+
 
 	return 0;
 
