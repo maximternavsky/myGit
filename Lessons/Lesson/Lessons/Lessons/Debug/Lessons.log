@@ -1,2 +1,4 @@
 ﻿  Source.cpp
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(163,38): warning C4305: аргумент: усечение из "__int64" в "unsigned long"
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(163,27): warning C4309: аргумент: усечение константного значения
   Lessons.vcxproj -> C:\Git\Lessons\Lesson\Lessons\Debug\Lessons.exe
