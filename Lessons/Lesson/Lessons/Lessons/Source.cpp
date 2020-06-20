@@ -2,6 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -182,6 +183,47 @@ std::string abbrevName(std::string name)
 	newName += ".";
 	newName += initiales.second;
 	return newName;
+}
+
+std::vector<int> countPositivesSumNegatives(std::vector<int> input)
+{
+	if (input.size() == 0)
+	{
+		return input;
+	}
+
+	int positiveDigitsCount = 0;
+	int summNegativeDigits = 0;
+
+
+	for (int i : input)
+	{
+		if (i > 0)
+		{
+			positiveDigitsCount++;
+		}
+		else
+		{
+			summNegativeDigits += i;
+		}
+	}
+
+	input.clear();
+	input.push_back(positiveDigitsCount);
+	input.push_back(summNegativeDigits);
+
+	return input;
+
+}
+
+std::vector<int> maps(const std::vector<int>& values) {
+
+	vector<int> result;
+	for (int i : values)
+	{
+		result.push_back(i * 2);
+	}
+	return result;
 }
 
 int main()
