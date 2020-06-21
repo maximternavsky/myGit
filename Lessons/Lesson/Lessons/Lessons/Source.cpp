@@ -226,16 +226,71 @@ std::vector<int> maps(const std::vector<int>& values) {
 	return result;
 }
 
+int sum(vector<int> numbers)
+{
+	if (numbers.size() == 0)
+	{
+		return 0;
+	}
+
+	int minDigit = numbers.at(0);
+	int maxDigit = numbers.at(0);
+	int sum = 0;
+
+
+	for (int i : numbers)
+	{
+		if (i < minDigit)
+		{
+			minDigit = i;
+		}
+		if (i > maxDigit)
+		{
+			maxDigit = i;
+		}
+
+		sum += i;
+	}
+
+	sum -= minDigit + maxDigit;
+
+	return sum;
+
+}
+
+std::vector<int> invert(std::vector<int> values)
+{
+	
+	vector<int>::iterator it = values.end() - 1;
+	for (it = values.end() - 1; it > values.begin(); it--)
+	{
+		*it = *it * -1;
+	}
+
+	*it = *it * -1;
+
+	return values;
+}
+
+int string_to_number(const std::string& s) {
+	return stoi(s);
+}
+
+int points(const array<string, 10 > & games) {
+
+	
+
+	return 0;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
-	abbrevName("sam Harris");
+	int r;
+	r = points(array<string, 10>{"1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"});
+
 	
-	/*for (size_t i = 0; i < 255; i++)
-	{
-		cout << i << ' ' << char(i) << endl;
-	}*/
 
 	return 0;
 
