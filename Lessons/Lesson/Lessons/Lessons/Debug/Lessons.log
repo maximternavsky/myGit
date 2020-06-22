@@ -1,7 +1,6 @@
 ﻿  Source.cpp
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(166,22): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(291,83): error C2664: "int points(const std::array<std::string,10> &)": невозможно преобразовать аргумент 1 из "initializer list" в "const std::array<std::string,10> &"
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(291,83): message : Причина: невозможно преобразовать "initializer list" в "const std::array<std::string,10>"
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(291,83): message : использование неопределенного типа "std::array<std::string,10>"
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(279,23): message : см. объявление "std::array<std::string,10>"
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(279,5): message : см. объявление "points"
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(293,17): warning C4129: $: неизвестная escape-последовательность
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(293,49): warning C4129: $: неизвестная escape-последовательность
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(336,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(331): warning C4715: rps: значение возвращается не при всех путях выполнения
+  Lessons.vcxproj -> C:\Git\Lessons\Lesson\Lessons\Debug\Lessons.exe

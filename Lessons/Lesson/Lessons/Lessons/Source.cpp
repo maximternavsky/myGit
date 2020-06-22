@@ -158,15 +158,15 @@ vector<int> digitize(unsigned long n)
 	return reverse;
 }
 
-int square_sum(const std::vector<int>& numbers)
-{
-	int result = 0;
-	for (int i : numbers)
-	{
-		result += pow(i, 2);
-	}
-	return result;
-}
+//int square_sum(const std::vector<int>& numbers)
+//{
+//	int result = 0;
+//	for (int i : numbers)
+//	{
+//		result += pow(i, 2);
+//	}
+//	return result;
+//}
 
 std::string abbrevName(std::string name)
 {
@@ -276,20 +276,96 @@ int string_to_number(const std::string& s) {
 	return stoi(s);
 }
 
-int points(const array<string, 10 > & games) {
+std::vector<int> MonkeyCount(int n) {
 
+	vector<int> result;
+	for (int i = 1; i <= n; i++)
+	{
+		result.push_back(i);
+	}
+
+	return result;
+}
+
+string bonus_time(int salary, bool bonus)
+{
+	string f = "$" + to_string(100000 * 10);
+	return bonus ? "\$" + to_string(salary * 10) : "\$" + salary;
+}
+
+
+double calcAverage(const std::vector<int>& values) {
+
+	double sum = 0;
+
+	for (int i : values)
+	{
+		sum += i;
+	}
+
+	return sum / values.size();
+}
+
+std::vector<int> reverseSeq(int n) {
+
+	std::vector<int> result;
+	for (int i = n; i > 0; i--)
+	{
+		result.push_back(i);
+	}
+
+	return result;
+}
+
+std::string rps(const std::string& p1, const std::string& p2)
+{
+
+	if (p1 == p2) return "Draw!";
+	if (p1 == "rock" && p2 == "scissors") return "Player 1 won!";
+	if (p1 == "rock" && p2 == "paper") return "Player 2 won!";
+	if (p1 == "scissors" && p2 == "rock") return "Player 2 won!";
+	if (p1 == "scissors" && p2 == "paper") return "Player 1 won!";
+	if (p1 == "paper" && p2 == "rock") return "Player 1 won!";
+	if (p1 == "paper" && p2 == "scissors") return "Player 2 won!";
+		
+}
+
+std::string fakeBin(std::string str) {
+	std::string result = "";
+	const int CONSTCHAR = 48;
+	for (int i = 0; i < str.size(); i++)
+	{
+		if ((str[i]) >= 5 + CONSTCHAR)
+		{
+			result.push_back('1');
+		}
+		else
+		{
+			result.push_back('0');
+		}
+	}
+
+	return result;
+}
+
+std::string DNAtoRNA(std::string dna) {
+	int count = dna.find('T');
 	
+	while (count != -1)
+	{
+		dna.replace(count, 1, "U");
+		count = dna.find('T');
+	}
 
-	return 0;
+	return dna;
 }
 
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
-	int r;
-	r = points(array<string, 10>{"1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"});
 
+	DNAtoRNA("GCAT");
 	
 
 	return 0;
