@@ -430,11 +430,104 @@ int arrayPlusArray(std::vector<int> a, std::vector<int> b) {
 
 string to_alternating_case(const string& str)
 {
+	string result = "";
 	for (int i = 0; i < str.length(); i++)
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z') str[i] = str[i] + 32;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			result.push_back(str[i] + 32);
+		}
+		else if(str[i] >= 'a' && str[i] <= 'z')
+		{
+			result.push_back(str[i] - 32);
+		}
+		else
+		{
+			result.push_back(str[i]);
+		}
+
 	}
-	return "";
+
+	return result;
+}
+
+bool betterThanAverage(std::vector<int> classPoints, int yourPoints) {
+
+	double average = 0;
+	for (int i : classPoints)
+	{
+		average += i;
+	}
+
+	if (average / classPoints.size() > yourPoints)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+int simpleMultiplication(int a) {
+	return (a % 2 != 0) ? a * 9 : a * 8;
+}
+
+bool feast(std::string beast, std::string dish) {
+	
+	if (beast.at(0) == dish.at(0) && beast.at(beast.length() - 1) == dish.at(dish.length() - 1))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+int sum1(std::vector<int> nums) {
+	if (nums.size() == 0) return 0;
+	
+	int sum = 0;
+
+	for (int i : nums)
+	{
+		sum += i;
+	}
+
+	return sum;
+}
+
+int odd_count(int n) {
+
+	int count = -1;
+
+	if (n % 2 == 0)
+	{
+		n--;
+		count++;
+	}
+
+
+	for (int i = n; i > 0; i -= 2)
+	{
+		count++;
+	}
+
+	return count;
+}
+
+std::string correct(std::string str) {
+	for (char &i : str)
+	{
+		switch (i)
+		{
+		case '5': i = 'S'; break;
+		case '0': i = 'O'; break;
+		case '1': i = 'I'; break;
+		default: break;
+		}
+	}
+
+	return str;
 }
 
 int main()
@@ -442,7 +535,7 @@ int main()
 	setlocale(LC_ALL, "Rus");
 	
 
-	countSheep(100);
+	correct("1F-RUDYARD K1PL1NG");
 	
 
 	return 0;
