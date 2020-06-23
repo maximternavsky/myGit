@@ -360,12 +360,89 @@ std::string DNAtoRNA(std::string dna) {
 	return dna;
 }
 
+int min(vector<int> list) {
+
+	if (list.size() == 0) return 0;
+
+	int minDigit = list.at(0);
+
+	for (int i : list)
+	{
+		if (i < minDigit) minDigit = i;
+	}
+	return minDigit;
+}
+
+int max(vector<int> list) {
+
+	if (list.size() == 0) return 0;
+
+	int maxDigit = list.at(0);
+
+	for (int i : list)
+	{
+		if (i > maxDigit) maxDigit = i;
+	}
+	return maxDigit;
+}
+
+#include <vector>
+int grow(std::vector<int> nums) {
+	int mult = 1;
+
+	for (int i : nums)
+	{
+		mult *= i;
+	}
+
+	return mult;
+}
+
+std::string countSheep(int number) {
+
+	std::string sheep = " sheep...";
+	std::string result = "";
+	if (number == 0) return 0;
+	for (int i = 0; i < number; i++)
+	{
+		result += to_string(i + 1);
+		result += sheep;
+	}
+
+	return result;
+}
+
+int arrayPlusArray(std::vector<int> a, std::vector<int> b) {
+
+	int sum = 0;
+
+	for (int i : a)
+	{
+		sum += i;
+	}
+	for (int i : b)
+	{
+		sum += i;
+	}
+
+	return sum; 
+}
+
+string to_alternating_case(const string& str)
+{
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z') str[i] = str[i] + 32;
+	}
+	return "";
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
 
-	DNAtoRNA("GCAT");
+	countSheep(100);
 	
 
 	return 0;
