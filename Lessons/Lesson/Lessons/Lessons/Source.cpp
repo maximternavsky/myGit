@@ -3,6 +3,7 @@
 #include <cmath>
 #include <string>
 #include <map>
+#include <ctime>
 
 using namespace std;
 
@@ -530,12 +531,111 @@ std::string correct(std::string str) {
 	return str;
 }
 
+bool zero_fuel(uint32_t distance_to_pump, uint32_t mpg, uint32_t fuel_left)
+{
+	return (fuel_left * mpg) >= distance_to_pump ? true : false;
+}
+
+bool hero(int bullets, int dragons) {
+	return dragons * 2 <= bullets;
+}
+
+std::string bmi(double w, double h)
+{
+
+	//throw std::logic_error("Method or operation is not implemented");
+
+	float bmi = w / pow(h, 2);
+
+	if (bmi <= 18.5) return "Underweight";
+
+	if (bmi <= 25.0) return "Normal";
+
+	if (bmi <= 30.0) return "Overweight";
+
+	if (bmi > 30) return "Obese";
+}
+
+std::string makeUpperCase(const std::string& input_str)
+{
+	string result = "";
+	for (char i : input_str)
+	{
+		if (i >= 'a' && i <= 'z') 
+		{
+			result.push_back(i - 32);
+		}
+		else
+		{
+			result.push_back(i);
+		}
+	}
+
+	return result;
+}
+
+int get_average(std::vector <int> marks)
+{
+	int sum = 0;
+
+	for (int i : marks)
+	{
+		sum += i;
+	}
+
+	int average = sum / marks.size();
+
+	return average;
+}
+
+std::string removeExclamationMarks(std::string str) {
+	int exclamat = str.find('!');
+	while (exclamat != -1)
+	{
+		str.erase(exclamat, 1);
+		exclamat = str.find('!');
+	}
+
+	return str;
+}
+
+std::string how_much_i_love_you(int nb_petals) {
+
+	if (nb_petals > 6) nb_petals %= 6; nb_petals++;
+
+	switch (nb_petals)
+	{
+	case(1): return "I love you";
+	case(2): return "a little";
+	case(3): return "a lot";
+	case(4): return "passionately";
+	case(5): return "madly";
+	case(0): return "not at all";
+	default: return "";
+	}
+}
+
+std::string boolean_to_string(bool b) {
+	return b ? "true" : "false";
+}
+
+std::vector<int> divisible_by(std::vector<int> numbers, int divisor)
+{
+	vector<int> result;
+
+	for (int i : numbers)
+	{
+		if (i % divisor == 0) result.push_back(i);
+	}
+	return result;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
 
-	correct("1F-RUDYARD K1PL1NG");
+	how_much_i_love_you(283);
 	
 
 	return 0;
