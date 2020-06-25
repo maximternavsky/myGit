@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <ctime>
+#include <algorithm> 
 
 using namespace std;
 
@@ -630,12 +631,58 @@ std::vector<int> divisible_by(std::vector<int> numbers, int divisor)
 	return result;
 }
 
+std::string twoSort(std::vector<std::string> s)
+{
+	string firstElement;
+	string result = "";
+	bool isNotFirst = false;
+
+	sort(s.begin(), s.end());
+
+	firstElement = s.at(0);
+
+	for (char i : firstElement)
+	{
+		if (isNotFirst) result += "***";
+		result += i;
+		isNotFirst = true;
+	}
+
+	return result;
+}
+
+class Triangle {
+public:
+	static int otherAngle(int a, int b);
+};
+
+int Triangle::otherAngle(int a, int b)
+{
+	return 180 - (a + b);
+}
+
+int seats_in_theater(int total_col, int total_row, int col, int row) {
+	return (total_col - col + 1) * (total_row - row);
+}
+
+unsigned int strCount(std::string word, char letter) {
+	int count = 0;
+
+	for (char i : word)
+	{
+		if (i == letter) count++;
+	}
+
+	return count;
+}
+
+
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
 
-	how_much_i_love_you(283);
+	twoSort({ "bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps" });
 	
 
 	return 0;
