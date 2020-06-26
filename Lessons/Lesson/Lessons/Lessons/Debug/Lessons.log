@@ -1,9 +1,10 @@
 ﻿  Source.cpp
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(294,17): warning C4129: $: неизвестная escape-последовательность
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(294,49): warning C4129: $: неизвестная escape-последовательность
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(337,20): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(435,20): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(548,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(332): warning C4715: rps: значение возвращается не при всех путях выполнения
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(557): warning C4715: bmi: значение возвращается не при всех путях выполнения
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(295,17): warning C4129: $: неизвестная escape-последовательность
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(295,49): warning C4129: $: неизвестная escape-последовательность
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(338,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(436,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(549,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(712,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(333): warning C4715: rps: значение возвращается не при всех путях выполнения
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(558): warning C4715: bmi: значение возвращается не при всех путях выполнения
   Lessons.vcxproj -> C:\Git\Lessons\Lesson\Lessons\Debug\Lessons.exe

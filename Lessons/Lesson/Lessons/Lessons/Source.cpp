@@ -676,13 +676,120 @@ unsigned int strCount(std::string word, char letter) {
 	return count;
 }
 
+bool is_uppercase(const std::string& s) {
+
+	for (char i : s)
+	{
+		if(i >= 'a' && i <= 'z') return false;
+	}
+	return true;
+}
+
+std::vector<int> humanYearsCatYearsDogYears(int humanYears) {
+	vector<int> ages;
+	int ageCat, ageDog;
+
+	if(humanYears == 1)
+	{
+		ages.push_back(humanYears);
+		ages.push_back(15);
+		ages.push_back(15);
+
+		return ages;
+	}
+	if (humanYears == 2)
+	{
+		ages.push_back(humanYears);
+		ages.push_back(24);
+		ages.push_back(24);
+
+		return ages;
+	}
+
+	ageCat = 24;
+	ageDog = 24;
+
+	for (size_t i = 0; i < humanYears - 2; i++)
+	{
+		ageCat += 4;
+		ageDog += 5;
+	}
+
+	ages.push_back(humanYears);
+	ages.push_back(ageCat);
+	ages.push_back(ageDog);
+
+	return ages;
+
+}
+
+char getGrade(int a, int b, int c) {
+	double average = (a + b + c) / 3;
+
+	if (average < 60) return 'F';
+	if (average >= 60 && average < 70) return 'D';
+	if (average >= 70 && average < 80) return 'C';
+	if (average >= 80 && average < 90) return 'B';
+	if (average >= 90) return 'A';
+
+	return '\0';
+}
+
+double getVolumeOfCubiod(double length, double width, double height) {
+	return length * width * height;
+}
+
+string replace(const string& s)
+{
+	string result = "";
+	string vowel = "aeiouAEIOU";
+	bool isVowel = false;
+	for (char i : s)
+	{
+		for (char j : vowel)
+		{
+			if (i == j)
+			{
+				isVowel = true;
+				break;
+			}
+		}
+
+		if (isVowel)
+		{
+			isVowel = false;
+			result.push_back('!');
+		}
+		else
+		{
+
+			result.push_back(i);
+		}
+
+	}
+	return result;
+}
+
+std::vector<int> createVector(const int n)
+{
+	std::vector<int> res;
+
+	for (int i = 1; i <= n;)
+	{
+		res.push_back(i);
+	}
+
+	return res;
+}
+
 
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
 
-	twoSort({ "bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps" });
+	std::vector<int> res = { 1 };
+	createVector(1);
 	
 
 	return 0;
