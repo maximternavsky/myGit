@@ -5,6 +5,7 @@
 #include <map>
 #include <ctime>
 #include <algorithm> 
+#include <array>
 
 using namespace std;
 
@@ -780,6 +781,15 @@ std::vector<int> createVector(const int n)
 	}
 
 	return res;
+}
+
+std::array<std::string, 3> fixTheMeerkat(std::array<std::string, 3> arr) {
+	array<string, 3> result;
+	result[0] = arr[2];
+	result[1] = arr[1];
+	result[2] = arr[0];
+
+	return result;
 }
 
 
