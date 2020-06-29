@@ -6,6 +6,7 @@
 #include <ctime>
 #include <algorithm> 
 #include <array>
+#include <sstream>
 
 using namespace std;
 
@@ -792,14 +793,123 @@ std::array<std::string, 3> fixTheMeerkat(std::array<std::string, 3> arr) {
 	return result;
 }
 
+int hexToDec(std::string hexString)
+{
+	unsigned int result;
+	stringstream ss;
+	ss << hex << hexString;
+	ss >> result;
+	return 0;
+}
+
+bool is_even(double n)
+{
+	int x = (int)n;
+	if (x == n)
+	{
+		return x % 2 == 0;
+	}
+
+
+	return false;
+}
+
+int findDifference(std::array<int, 3> a, std::array<int, 3> b) {
+	
+	int vA = 1, vB = 1;
+
+	for (int i : a)
+	{
+		vA *= i;
+	}
+
+	for (int i : b)
+	{
+		vB *= i;
+	}
+
+	return (vA > vB) ? vA - vB : vB - vA;
+}
+
+int area_or_perimeter(int l, int w) {
+	return (l == w) ? (l * w) : (l * 2 + w * 2);
+}
+
+std::string howManyDalmatians(int number) {
+	std::vector<std::string> dogs = { "Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!" };
+	return number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number == 101 ? dogs[2] : dogs[3];
+}
+
+int move(int position, int roll) {
+	return position + roll * 2;
+}
+
+bool isPalindrom(const std::string& str)
+{
+	if (str.length() == 1) return true;
+
+	string s = "";
+
+
+	for (char i : str)
+	{
+		if (i >= 'A' && i <= 'Z')
+		{
+			s.push_back(i + 32);
+		}
+		else
+		{
+			s.push_back(i);
+		}
+	}
+	
+	for (int i = 0, j = s.length() - 1; i < s.length() / 2; i ++, j--)
+	{
+		if (s[i] != s[j]) return false;
+	}
+
+
+	return true;
+}
+
+std::string chromosomeCheck(std::string sperm)
+{
+	return (sperm.find('Y') == -1) ? "Congratulations! You're going to have a daughter." : "Congratulations! You're going to have a son.";
+}
+
+int duty_free(int price, int discount, int holiday_cost) {
+	float result = (float)holiday_cost / ((float)price * (float)discount / 100);
+	return result;
+}
+
+int sumOfDifferences(const std::vector<int>& arr) {
+	vector<int> arr2 = arr;
+	if (arr2.size() <= 1) return 0;
+
+	sort(arr2.begin(), arr2.end());
+
+	if (arr2.size() == 2) return arr2[1] - arr[0];
+
+	int sum = 0;
+	if (arr2.size() > 2) 
+	{
+		for (int i = arr2.size() - 1; i > 0; i--)
+		{
+			sum += arr2[i] - arr2[i - 1];
+		}
+	}
+	
+	return sum;
+
+
+}
 
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
-
-	std::vector<int> res = { 1 };
-	createVector(1);
+	
+	sumOfDifferences({ 1,2,10 });
 	
 
 	return 0;

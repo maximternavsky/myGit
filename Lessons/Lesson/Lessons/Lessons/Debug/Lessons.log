@@ -1,10 +1,12 @@
 ﻿  Source.cpp
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(295,17): warning C4129: $: неизвестная escape-последовательность
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(295,49): warning C4129: $: неизвестная escape-последовательность
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(338,20): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(436,20): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(549,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(712,23): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(333): warning C4715: rps: значение возвращается не при всех путях выполнения
-C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(558): warning C4715: bmi: значение возвращается не при всех путях выполнения
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(297,17): warning C4129: $: неизвестная escape-последовательность
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(297,49): warning C4129: $: неизвестная escape-последовательность
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(340,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(438,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(551,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(714,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(866,40): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(882,9): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(335): warning C4715: rps: значение возвращается не при всех путях выполнения
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(560): warning C4715: bmi: значение возвращается не при всех путях выполнения
   Lessons.vcxproj -> C:\Git\Lessons\Lesson\Lessons\Debug\Lessons.exe
