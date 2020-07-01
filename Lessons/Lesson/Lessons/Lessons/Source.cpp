@@ -904,12 +904,33 @@ int sumOfDifferences(const std::vector<int>& arr) {
 
 }
 
+std::string evil(int n)
+{
+	int evil[] = { 3, 5, 6, 9, 10, 12, 15, 17, 18, 20 };
+
+	for (int i : evil)
+	{
+		if (i == n) return "It's Evil!";
+	}
+
+	return "It's Odious!";
+}
+
+std::string integrate(const int& coefficient, const int& exponent) {
+	string result = to_string(coefficient / (exponent + 1)) + "x^" + to_string(exponent + 1);
+	//result.push_back(a);
+	/*result.push_back('x');
+	result.push_back('/^');
+	result += to_string(exponent + 1);*/
+	return result;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
 	
-	sumOfDifferences({ 1,2,10 });
+	integrate(90, 2);
 	
 
 	return 0;
