@@ -925,12 +925,68 @@ std::string integrate(const int& coefficient, const int& exponent) {
 	return result;
 }
 
+int mango(int quantity, int price)
+{
+	return (quantity - (quantity / 3)) * price;
+}
+
+//void _if(bool value, std::function<void(void)> func1, std::function<void(void)> func2)
+//{
+	/*if (value) { func1(); }
+	else { func2(); }*/
+//}
+
+long pillars(int num_of_pillars, int distance, int width) {
+
+	if (num_of_pillars < 2)
+	{
+		return 0;
+	}
+	
+	int result = 0;
+
+	for (int i = 1; i < num_of_pillars; i++)
+	{
+		result += distance * 100 + width;
+	}
+
+	result -= width;
+	return result;
+}
+
+unsigned int hotpo(unsigned int n) {
+	if (n == 0 || n == 1) return 0; 
+
+	int result = 0;
+	while (n != 1)
+	{
+		if (n % 2 == 0) 
+		{
+			n /= 2;
+		}
+		else
+		{
+			n = 3 * n + 1;
+		}
+
+		result++;
+	}
+
+	return result;
+}
+
+double converter(int mpg)
+{
+	double kmpg = mpg * 1.6;
+	double kmpl = kmpg / 4.5;
+	return floor(kmpl * 10) / 10;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
-	
-	integrate(90, 2);
+	converter(12);
 	
 
 	return 0;
