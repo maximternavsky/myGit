@@ -977,16 +977,87 @@ unsigned int hotpo(unsigned int n) {
 
 double converter(int mpg)
 {
-	double kmpg = mpg * 1.6;
-	double kmpl = kmpg / 4.5;
-	return floor(kmpl * 10) / 10;
+	double kmpg = mpg * 1.609344;
+	double kmpl = kmpg / 4.54609188;
+	return round(kmpl * 100) / 100;
+}
+
+double SakuraFall(double v) {
+	if (v <= 0) return 0;
+	double s = 80 * 5;
+	return s / v;
+}
+
+int countSquares(int cuts)
+{
+	if (cuts <= 0) return 1;
+	return ((cuts + 1) * cuts * 4) + ((cuts - 1) * (cuts - 1) * 2);
+}
+
+class Guesser
+{
+public:
+	Guesser(int number, int lives)
+		: number(number), lives(lives)
+	{ }
+
+	bool guess(int n)
+	{
+		if (n == this->number)
+		{
+			return true;
+		}
+		else
+		{
+			lives--;
+			//if (lives <= 0) throw system_error{ '5' };
+			return false;
+		}
+	}
+
+private:
+
+	int number, lives;
+};
+
+bool PythagoreanTriple(const int a, const int b, const int c)
+{
+	int c2 = pow(c, 2);
+	int ab2 = pow(a, 2) + pow(b, 2);
+	return pow(c, 2) == pow(a, 2) + pow(b, 2);
+}
+
+bool amIWilson(unsigned n) {
+	vector< unsigned long long int> factorials = { 1, 2, 6, 24, 120, 720, 5040, 40320, 362880,
+												 3628800, 39916800, 479001600, 6227020800, 87178291200,
+												 1307674368000, 20922789888000, 355687428096000, 6402373705728000,
+												 121645100408832000, 2432902008176640000 };
+
+	double a = (factorials[n] + 1) / n * n;
+	return true;
+}
+
+std::vector<int> digits(int n) {
+	vector<int> result;
+	int count = 1;
+	for (char i : to_string(n))
+	{
+		for (int j = count; j < to_string(n).length(); j++)
+		{
+			result.push_back((int)(to_string(n)[j]) + i);
+		}
+
+		count++;
+	}
+
+	return result;
 }
 
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
-	converter(12);
+	digits(156);
 	
 
 	return 0;

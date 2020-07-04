@@ -7,6 +7,14 @@ C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(551,12): warning C4244: ини�
 C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(714,23): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(866,40): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(882,9): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(1025,9): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(1026,10): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(1036,11): warning C4244: инициализация: преобразование "_Ty" в "double", возможна потеря данных
+          with
+          [
+              _Ty=unsigned __int64
+          ]
+C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(1045,25): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(335): warning C4715: rps: значение возвращается не при всех путях выполнения
 C:\Git\Lessons\Lesson\Lessons\Lessons\Source.cpp(560): warning C4715: bmi: значение возвращается не при всех путях выполнения
   Lessons.vcxproj -> C:\Git\Lessons\Lesson\Lessons\Debug\Lessons.exe
