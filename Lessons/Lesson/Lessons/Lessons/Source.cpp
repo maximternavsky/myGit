@@ -7,6 +7,7 @@
 #include <algorithm> 
 #include <array>
 #include <sstream>
+#include "MyClass.h"
 
 using namespace std;
 
@@ -1039,14 +1040,25 @@ bool amIWilson(unsigned n) {
 
 std::vector<int> digits(int n) {
 	vector<int> result;
-	int count = 1;
-	for (char i : to_string(n))
-	{
-		for (int j = count; j < to_string(n).length(); j++)
-		{
-			result.push_back((int)(to_string(n)[j]) + i);
-		}
+	vector<int> numbers;
 
+
+	int summ = 0;
+	string str = to_string(n);
+	int length = str.length() - 1;
+
+	for (int i = 0, j = length; i < length + 1; i++, j--)
+	{
+		numbers.push_back(n / (int)((i == length) ? 1 : pow(10, j)) % 10);
+	}
+
+	int count = 1;
+	for (int i : numbers)
+	{
+		for (int j = count; j < numbers.size(); j++)
+		{
+			result.push_back(i + numbers[j]);
+		}
 		count++;
 	}
 
@@ -1057,7 +1069,10 @@ int main()
 {
 	setlocale(LC_ALL, "Rus");
 	
-	digits(156);
+	char x[] = "Hello world";
+	myNameSpace::MyClass m;
+	m.PrintMessage(x);
+	digits(81596);
 	
 
 	return 0;
