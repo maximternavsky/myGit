@@ -1,2 +1,3 @@
 ﻿  Source.cpp
-  WEB PARSER.vcxproj -> C:\Git\WEB PARSER\WEB PARSER\Debug\WEB PARSER.exe
+C:\Git\WEB PARSER\WEB PARSER\WEB PARSER\Source.cpp(153,9): error C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+C:\Git\WEB PARSER\WEB PARSER\WEB PARSER\Source.cpp(170,9): error C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
